@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Mobile_04_20182</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="parcel_student" translatable="false">pclstudent</string>
     <string name="text_id">ID</string>
     <string name="text_name">Name</string>

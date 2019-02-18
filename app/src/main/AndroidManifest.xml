@@ -20,6 +20,11 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".ActivityDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.robby.mobile_04_20182.Main2Activity" />
+        </activity>
     </application>
 
 </manifest>

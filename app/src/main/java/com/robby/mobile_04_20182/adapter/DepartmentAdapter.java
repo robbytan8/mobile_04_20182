@@ -48,7 +48,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.De
 
     class DepartmentViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtName;
+        private final TextView txtName;
 
         DepartmentViewHolder(@NonNull View itemView) {
             super(itemView);

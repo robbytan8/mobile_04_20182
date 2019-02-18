@@ -13,7 +13,6 @@ public class Student implements Parcelable {
     private String lastName;
     private String department;
     private String address;
-
     private String phone;
 
     protected Student(Parcel in) {

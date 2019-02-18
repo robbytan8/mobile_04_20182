@@ -1,6 +1,7 @@
 package com.robby.mobile_04_20182.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,24 +25,22 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
     private ArrayList<Student> students;
     private StudentDataClickedListener studentDataClickedListener;
 
+    @NonNull
     @Override
-    public StudentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.row_student, parent, false);
         return new StudentViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(StudentViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
         final Student student = getStudents().get(position);
         holder.lblName.setText(student.getDetails());
         holder.lblDepartment.setText(student.getDepartment());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (studentDataClickedListener != null) {
-                    studentDataClickedListener.onStudentDataClicked(student);
-                }
+        holder.itemView.setOnClickListener(v -> {
+            if (studentDataClickedListener != null) {
+                studentDataClickedListener.onStudentDataClicked(student);
             }
         });
     }
